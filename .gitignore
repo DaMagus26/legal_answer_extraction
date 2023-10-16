@@ -346,3 +346,4 @@ pyrightconfig.json
 
 # Debugging files
 playground*.py
+db/
