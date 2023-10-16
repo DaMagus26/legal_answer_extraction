@@ -347,3 +347,4 @@ pyrightconfig.json
 # Debugging files
 *playground.py
 *playground.ipynb
+db/
