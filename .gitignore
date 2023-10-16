@@ -345,4 +345,5 @@ pyrightconfig.json
 .idea/
 
 # Debugging files
-playground*.py
+*playground.py
+*playground.ipynb
