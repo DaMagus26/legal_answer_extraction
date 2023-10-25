@@ -10,12 +10,13 @@ class PineconeDB(AbstractVectorDB):
             api_key: str,
             environment: str,
             index_name: str) -> None:
-        self._init_pinecone(api_key, environment)
+
+        # self._init_pinecone(api_key, environment)
         self.index = pinecone.Index(index_name)
 
     @staticmethod
     def _init_pinecone(api_key: str, environment: str):
-        pinecone.init(api_key=api_key, environment=environment, )
+        pinecone.init(api_key=api_key, environment=environment)
 
     def insert(
             self,

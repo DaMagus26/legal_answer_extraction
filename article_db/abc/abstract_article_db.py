@@ -1,9 +1,8 @@
-import abc
-from abc import ABC
+from abc import ABC, abstractmethod
 import pandas as pd
 
 
 class AbstractArticleDB(ABC):
-    @abc.abstractmethod
+    @abstractmethod
     def get_table(self, table_name: str) -> pd.DataFrame:
         raise NotImplementedError()
