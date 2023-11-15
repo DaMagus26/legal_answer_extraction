@@ -44,3 +44,22 @@ class AnswerExtractor:
 
         return response
 
+
+class OpenAIAnswerExtractor:
+    def __init__(
+            self,
+            qa_model,
+            vector_db: WeaviateDB = None,
+            article_db: PandasArticleDB = None,
+            sequence_encoder=None,
+    ):
+        self.vector_db = vector_db
+        self.article_db = article_db
+        self.qa_model = qa_model
+        self.sequence_encoder = sequence_encoder
+
+    def find(self, query, context=None):
+        response = self.qa_model(query)
+
+        return response
+
